@@ -1,0 +1,4 @@
+INFO  time: initialize in 1.72s
+WARN  no build tool detected in workspace 'D:\code\java_ds_algos\linkedlist'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: D:\code\java_ds_algos\linkedlist\singly\TestScala.scala
+INFO  shutting down Metals
