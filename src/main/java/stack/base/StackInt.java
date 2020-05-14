@@ -1,4 +1,4 @@
-package stack;
+package stack.base;
 
 /**
 Pros: Easy to implement. Memory is saved as pointers are not involved.

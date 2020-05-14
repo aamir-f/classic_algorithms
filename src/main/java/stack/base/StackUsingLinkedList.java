@@ -1,4 +1,4 @@
-package stack;
+package stack.base;
 
 /**
  * Pros: The linked list implementation of stack can grow and shrink according to the needs at runtime.

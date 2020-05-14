@@ -1,5 +1,51 @@
 package stack;
 
+
+/**
+ Pros: Easy to implement. Memory is saved as pointers are not involved.
+ Cons: It is not dynamic. It doesn’t grow and shrink depending on needs at runtime.
+ */
+ class StackInt {
+    final static int MAX = 1000;
+    int top;
+    int a[] = new int[MAX];
+
+    boolean isEmpty() {
+        return (top < 0);
+    }
+
+    boolean nonEmpty() {
+        return !isEmpty();
+    }
+
+    StackInt() {
+        top = -1;
+    }
+
+    boolean push(int x) {
+        if(top > (MAX - 1)) {
+            System.out.println("Stack Overflow");
+            return false;
+        } else {
+            a[++top] = x;
+            return true;
+        }
+    }
+
+    int pop() {
+        if(top < 0) {
+            System.out.println("Stack Underflow");
+            return 0;
+        } else return a[top--];
+    }
+
+    int peek() {
+        if(top < 0) {
+            System.out.println("Stack Underflow");
+            return 0;
+        } else return a[top];
+    }
+}
 public class SignalTower {
 
     //TC: O(n*n)
@@ -21,8 +67,6 @@ public class SignalTower {
         for(int i = 0; i < arr.length; i++) {
             while(stack.nonEmpty() && arr[i] > arr[stack.peek()])
                 stack.pop();
-
-                //--
 
             if(stack.isEmpty()) res[i] = i + 1;
             else res[i] = i - stack.peek();
